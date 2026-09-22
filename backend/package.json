@@ -1,0 +1,9 @@
+{
+  "name": "laptop-allocation-backend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "FastAPI backend for the Laptop Allocation Management System. package.json is a thin npm launcher for the Python/Uvicorn server.",
+  "scripts": {
+    "dev": "python -m uvicorn app.main:app --host 127.0.0.1 --port 8000 --reload"
+  }
+}

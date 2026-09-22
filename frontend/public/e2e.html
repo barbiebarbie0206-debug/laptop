@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head><meta charset="UTF-8" /></head>
+  <body>
+    <script>
+      const params = new URLSearchParams(location.search)
+      const token = params.get('t') || ''
+      const route = params.get('r') || '/'
+      try {
+        localStorage.setItem('lams_token', token)
+        localStorage.setItem(
+          'lams_user',
+          JSON.stringify({ username: 'admin', fullName: 'System Administrator', role: 'admin' })
+        )
+      } catch (e) {
+        document.title = 'E2E_BOOTSTRAP_ERROR'
+      }
+      location.replace(route)
+    </script>
+  </body>
+</html>
